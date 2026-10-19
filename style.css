@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    font-family: "Open Sans", sans-serif;
+}
+:root{
+    --card-bg:rgb(255,255,255);
+    --primery-color:rgb(255, 255, 255);
+    --secondary-color:rgb(64,149,191);
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    gap: 1rem;
+    align-items: flex-start;
+}
+.card{
+    --padding:1rem ;
+    background-color:var(--card-bg);
+    border: 1px solid gray;
+    padding-bottom:var(--padding);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.card-header{
+    font-size: 1.5em;
+    padding: var(--padding);
+    padding-bottom: 0px;
+    margin-bottom: .5rem;
+    transition: 200ms, transform,ease-in-out;
+}
+.card-header.card-image{
+    overflow: hidden;
+    padding: 0;
+}
+.card:hover>.card-header.card-image>img{
+    transform: scale(1.025);
+}
+.card-header.card-image>img{
+    display: block;
+    width: 100%;
+    max-height: 200px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+.card-body{
+    font-size:0.8em;
+    padding: 0px var(--padding);
+    margin-bottom: 1rem;
+}
+.card-footer{
+    margin-top: 1rem;
+    padding:0px var(--padding);
+}
+.card-shadow{
+    border: none;
+    box-shadow: 0 2px 5px 0px rgb(0,0,0,0.3);
+}
+button{
+    padding: 8PX 16PX;
+    /* background-color: blue;
+    color: white; */
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer; 
+}
+.button1{
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primery-color);   
+    color: var(--primery-color);
+}
+.button2{
+    background-color: var(--primery-color);
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+.button2:hover,.button2:focus{
+    background: #ebebeb;
+}
+.button1:hover,.button1:focus{
+    background-color:rgb(102,170,204);
+}
+.button1 + .button2{
+    margin-left:.5rem ;
+}
